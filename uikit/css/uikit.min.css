@@ -10636,21 +10636,21 @@ th.uk-text-break {
 }
 
 #left-column {
-    width: 800px;
+    width: 804px;
     min-height: 800px;
     border: 1px solid #CDCDCD;
     float:left;
     margin-left: 200px;
-    background-color: #D0F3D0;
+    background-color: #EBFDEB;
     margin-bottom: 5px;
 }
 #right-column {
-    width: 300px;
+    width: 296px;
     min-height: 800px;
     border: 1px solid #CDCDCD;
     float:left;
-    margin-left: 5px;
-    background-color: #A8F9FB;
+    margin-left: 3px;
+    background-color: #E3FEFF;
     margin-bottom: 5px;
 }
 #footer{
