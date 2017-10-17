@@ -7,7 +7,9 @@
     </title>
 
     <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/css/uikit.min.css" />
+    <link rel="stylesheet" href="uikit.min.css" />
+	
+	
 
     <!-- jQuery is required -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -26,9 +28,9 @@
             <!-- Phần căn giữa -->
             <div class="uk-navbar-center">
                 <!-- Logo-->
-                <img src="logo.png" height="50px" width="100px" style="margin-right : 6%">
+                <img src="logo.png" height="80px" width="14%" style="margin-right : 6% " >
                 <!-- Form tìm kiếm-->
-                <div class="uk-inline">
+                <div class="uk-inline" style="width: 100%">
                     <a class="uk-form-icon" href="#" uk-icon="icon: search"></a>
                     <input class="uk-input" type="text" style="height: 30px">
                 </div>
@@ -44,7 +46,6 @@
                         <a href="#">Hồ sơ</a>
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
-
                                 <a href="#">
                                     <li class="uk-nav-header">Trang cá nhân</li>
                                 </a>
@@ -65,7 +66,8 @@
     <!--Kết thúc Sticky Navbar-->
 
     <!-- Bắt đầu Sub Navbar-->
-    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar; offset: 50">
+    <!-- Nếu muốn stick "uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar; offset: 50""-->
+    <div>
 
         <ul class="uk-subnav uk-subnav-divider" uk-margin style="margin-left: 12%">
             <li><a href="#">Nhạc cá nhân</a></li>
@@ -83,7 +85,45 @@
             </li>
         </ul>
     </div>
-    
+
+    <!-- Bắt đầu chia phần nội dung-->
+    <!-- Cột trái-->
+    <div id="left-column">
+            
+        <div class="uk-inline uk-visible-toggle uk-light"style="margin: 10px">
+            <img src="slide-image1.jpg" alt="">
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large" 
+                href="#" uk-slidenav-previous></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large" 
+                href="#" uk-slidenav-next></a>
+        </div>  
+    </div>
+    <div id="right-column">
+        <div >
+            <div class="uk-card uk-card-default uk-card-body" style="height:88px; 
+            margin-bottom:5px; background: url(card-img1.jpg)">
+            </div>
+        </div>
+        <div >
+                <div class="uk-card uk-card-default uk-card-body" style="height:88px; 
+                margin-bottom:5px; background: url(card-img2.jpg)">
+                </div>
+        </div>
+        <div >
+                <div class="uk-card uk-card-default uk-card-body" style="height:88px; 
+                margin-bottom:5px; background: url(card-img3.jpg)">
+                </div>
+        </div>
+        <div >
+                <div class="uk-card uk-card-default uk-card-body" style="height:88px; 
+                margin-bottom:5px; background: url(card-img4.jpg)">
+                </div>
+        </div>
+
+    </div>
+    <div id="footer">
+
+    </div>
 </body>
 
 </html>
