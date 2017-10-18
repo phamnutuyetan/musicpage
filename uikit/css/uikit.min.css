@@ -10650,8 +10650,14 @@ th.uk-text-break {
     border: 1px solid #CDCDCD;
     float:left;
     margin-left: 3px;
-    background-color: #E3FEFF;
+    background-color: #ECFFF1;
     margin-bottom: 5px;
+}
+#realtime-chart {
+    width: 296px;
+    height: 320px;
+    border: 1px solid #CDCDCD;
+    background-color: #C5F4B8;
 }
 #footer{
     height: 100px;
