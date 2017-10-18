@@ -2562,7 +2562,7 @@ select.uk-form-width-xsmall {
 }
 
 .uk-overlay-primary {
-    background: rgba(34, 34, 34, .8)
+    background: rgba(0, 0, 0, 0.47)
 }
 
 .uk-article::after,
@@ -10658,6 +10658,17 @@ th.uk-text-break {
     height: 320px;
     border: 1px solid #CDCDCD;
     background-color: #C5F4B8;
+}
+#left-singer-grid {
+    width: 256px;
+    height: 256px;
+    float: left;
+}
+#right-singer-grid {
+    width: 540px;
+    height: 256px;
+    float:left;
+    margin-left:4px;
 }
 #footer{
     height: 100px;
