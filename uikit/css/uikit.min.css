@@ -10638,19 +10638,19 @@ th.uk-text-break {
 #left-column {
     width: 804px;
     min-height: 800px;
-    border: 1px solid #CDCDCD;
+    
     float:left;
     margin-left: 200px;
-    background-color: #EBFDEB;
+    
     margin-bottom: 5px;
 }
 #right-column {
     width: 296px;
     min-height: 800px;
-    border: 1px solid #CDCDCD;
+    
     float:left;
     margin-left: 3px;
-    background-color: #ECFFF1;
+    
     margin-bottom: 5px;
 }
 #realtime-chart {
