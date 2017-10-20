@@ -10637,27 +10637,23 @@ th.uk-text-break {
 
 #left-column {
     width: 804px;
-    min-height: 800px;
-    
+    min-height: 650px;
     float:left;
     margin-left: 200px;
-    
     margin-bottom: 5px;
 }
 #right-column {
     width: 296px;
-    min-height: 800px;
-    
+    min-height: 650px;
     float:left;
     margin-left: 3px;
-    
     margin-bottom: 5px;
 }
 #realtime-chart {
     width: 296px;
     height: 320px;
     border: 1px solid #CDCDCD;
-    background-color: #C5F4B8;
+    background-color: #ECF4EA;
 }
 #left-singer-grid {
     width: 256px;
