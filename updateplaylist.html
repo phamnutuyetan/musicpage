@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Music Player
+    </title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="uikit/css/uikit.min.css" />
+
+
+    <!-- jQuery is required -->
+    <script src="uikit/js/jquery.min.js"></script>
+
+    <!-- UIkit JS -->
+    <script src="uikit/js/uikit.min.js"></script>
+    <script src="uikit/js/uikit-icons.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Bắt đầu tạo Sticky Navbar-->
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+        <nav class="uk-navbar-container uk-navbar" uk-navbar="" style="position: relative;z-index: 980;height: 50px;">
+
+            <!-- Phần căn giữa -->
+            <div class="uk-navbar-center">
+                <!-- Logo-->
+                <img src="images/logo.png" height="80px" width="14%" style="margin-right : 6% ">
+                <!-- Form tìm kiếm-->
+                <div class="uk-inline" style="width: 100%">
+                    <a class="uk-form-icon" href="#" uk-icon="icon: search"></a>
+                    <input class="uk-input" type="text" style="height: 30px">
+                </div>
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active">
+                        <a href="#">MP3</a>
+                    </li>
+                    <li class="uk-active">
+                        <a href="#">NEWS</a>
+                    </li>
+                    <li class="uk-active">
+                        <a href="#">TV</a>
+                    </li>
+                </ul>
+
+                <img src="images/avatar.png" height="20px" width="20px" style="margin-left: 100px">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active">
+                        <a href="#">Hồ sơ</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <a href="#">
+                                    <li class="uk-nav-header">Trang cá nhân</li>
+                                </a>
+                                <li>
+                                    <a href="#">Danh sách yêu thích</a>
+                                </li>
+                                <li>
+                                    <a href="#">Theo dõi</a>
+                                </li>
+                                <li>
+                                    <a href="#">Nhạc Upload</a>
+                                </li>
+                                <li class="uk-active">
+                                    <a href="#">Nâng cấp VIP</a>
+                                </li>
+                                <li class="uk-nav-divider"></li>
+                                <li>
+                                    <a href="#">Thoát</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div/>
+        </nav>
+    </div>
+    <!--Kết thúc Sticky Navbar-->
+
+    <!-- Bắt đầu Sub Navbar-->
+    <!-- Nếu muốn stick "uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar; offset: 50""-->
+    <div>
+
+        <ul class="uk-subnav uk-subnav-divider" uk-margin style="margin-left: 12%">
+            <li>
+                <a href="#">Nhạc cá nhân</a>
+            </li>
+            <li>
+                <a href="#">Chủ đề</a>
+            </li>
+            <li>
+                <a href="#">Album</a>
+            </li>
+            <li>
+                <a href="#">Video</a>
+            </li>
+            <li>
+                <a href="#">Nghệ sĩ</a>
+            </li>
+            <li>
+                <a href="#">BXH</a>
+            </li>
+            <li>
+                <a href="#">Top 100</a>
+            </li>
+            <li>
+                <a href="#">Real time</a>
+            </li>
+            <li>
+                <a href="#">Radio</a>
+            </li>
+            <li>
+                <a href="#">VIP</a>
+            </li>
+            <li>
+                <span href="" class="uk-icon-button" uk-icon="icon: upload" style="padding-left: 8px; padding-top: 8px; margin-left: 60px"></span> Upload nhạc
+            </li>
+        </ul>
+    </div>
+
+    <!-- Bắt đầu chia phần nội dung-->
+    <!-- Cột trái-->
+    <div id="left-column" style="width: 250px">
+        <div style="margin:20px">
+            <img src="images/avatar.png" height="40px" width="40px">
+            <span>Tên người dùng</span>
+            <hr/>
+        </div>
+        <div style="margin-left:40px">
+            <ul class="uk-nav uk-nav-default">
+                <li class="uk-nav-header" style="font-size: 18px;padding:0;">
+                    <a href="#" style="color:black">KÊNH CỦA TÔI</a>
+                </li>
+                <li class="uk-nav-header" style="font-size: 18px;padding:0;margin-top:8px">
+                    <a href="#" style="color:black">PLAYLIST CÁ NHÂN</a>
+                </li>
+                <li class="uk-nav-header" style="font-size: 18px; margin-top:8px">YÊU THÍCH</li>
+                <li>
+                    <a href="#">Bài hát</a>
+                </li>
+                <li>
+                    <a href="#">Playlist</a>
+                </li>
+                <li>
+                    <a href="#">Video</a>
+                </li>
+                <li class="uk-nav-header" style="font-size: 18px;margin-top:8px">QUAN TÂM</li>
+                <li>
+                    <a href="#">Nghệ sĩ</a>
+                </li>
+                <li class="uk-nav-header" style="font-size: 18px;padding:0;margin-top:8px">
+                    <a href="#" style="color:black">NHẠC UPLOAD</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <!--Cột phải-->
+    <div id="right-column" style="width: 850px">
+        <div style="margin:25px">
+            <h4 style="font-family:sans-serif; color:blueviolet">UPDATE PLAYLIST</h4>
+            <hr/>
+        </div>
+        <div style="margin-left:30px; margin-right:10px">
+            <img src="images/grid-image-2.jpg" style="width:200px;height:200px;float: left" />
+            <form class="uk-form-horizontal uk-margin-small">
+                <div class="uk-margin">
+                    <div class="uk-form-controls">
+                        <input class="uk-input uk-form-small" id="form-horizontal-text" type="text" style="width:476px;float:right; margin:20px;margin-top:0">
+                    </div>
+                    <label class="uk-form-label" for="form-horizontal-text" style="width:80px;font-size:16px; float:right">
+                        Tên Playlist
+                    </label>
+                </div>
+                <div class="uk-margin">
+                    <div class="uk-margin">
+                        <textarea class="uk-textarea" rows="5" style="width:476px;float:right; margin:20px;margin-top:0"></textarea>
+                    </div>
+                    <label class="uk-form-label" for="form-horizontal-text" style="width:80px;font-size:16px; float:right">
+                        Mô tả
+                    </label>
+                </div>
+            </form>
+            <div style="margin-left:30px; margin-right:10px">
+                <div class="uk-padding uk-background-muted uk-width-1-2@s" style="width:476px;float:right; margin:13px;margin-top:0;padding:10px;font-size:14px;background-color:rgb(203, 255, 210)">
+                    <div style="float:left; margin-right:12%">
+                        <ul class="uk-list">
+                            <li>
+                                <a href="#" uk-toggle="target: #toggle-VN-List">Việt Nam</a>
+                            </li>
+                            <li>
+                                <a href="#" >Hàn Quốc</a>
+                            </li>
+                            <li>
+                                <a href="#" >Âu Mỹ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="float:left; margin-right:12%">
+                        <ul class="uk-list">
+                            <li>
+                                <a href="#" uk-toggle="target: #toggle-HN-List">Hoa Ngữ</a>
+                            </li>
+                            <li>
+                                <a href="#" >Nhật Bản</a>
+                            </li>
+                            <li>
+                                <a href="#" >Hòa Tấu</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="float:left; margin-right:12%">
+                        <ul class="uk-list">
+                            <li>
+                                <a href="#" >Lào</a>
+                            </li>
+                            <li>
+                                <a href="#" >Myanmar</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="float:left">
+                        <ul class="uk-list">
+                            <li>
+                                <a href="#" >Campuchia</a>
+                            </li>
+                            <li>
+                                <a href="#" >Pháp</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <label class="uk-form-label" for="form-horizontal-text" style="width:80px;font-size:16px; float:right">
+                    Thể loại
+                </label>
+                <div id="toggle-VN-List" hidden class=" uk-padding uk-background-muted uk-width-1-2@s" style="width:476px;float:right; margin:13px;margin-top:0;padding:10px;font-size:14px;
+                border:1px;border-style: groove">
+                    <div class="uk-form-controls" style="float:left">
+                        <label>
+                            <input class="uk-radio" type="radio" name="radio1"> Option 01</label>
+                        <br>
+                        <label>
+                            <input class="uk-radio" type="radio" name="radio1"> Option 02</label>
+                    </div>
+                    <div class="uk-form-controls" style="margin-left:25px;float:left">
+                        <label>
+                            <input class="uk-radio" type="radio" name="radio1"> Option 01</label>
+                        <br>
+                        <label>
+                            <input class="uk-radio" type="radio" name="radio1"> Option 02</label>
+                    </div>
+                    <div class="uk-form-controls" style="margin-left:25px;float:left">
+                        <label>
+                            <input class="uk-radio" type="radio" name="radio1"> Option 01</label>
+                        <br>
+                        <label>
+                            <input class="uk-radio" type="radio" name="radio1"> Option 02</label>
+                    </div>
+                    <div class="uk-form-controls" style="margin-left:25px;float:left">
+                        <label>
+                            <input class="uk-radio" type="radio" name="radio1"> Option 01</label>
+                        <br>
+                        <label>
+                            <input class="uk-radio" type="radio" name="radio1"> Option 02</label>
+                    </div>
+                </div>
+                
+            </div>
+            <div style="float:right; width:476px">
+                <button class="uk-button uk-button-default" style="background-color:blueviolet;color:aliceblue">
+                    Lưu
+                </button>
+                <a href="#" style="margin-left:20px">Hủy bỏ</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer">
+
+    </div>
+</body>
+
+</html>
