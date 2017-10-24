@@ -124,16 +124,16 @@
     <!-- Bắt đầu chia phần nội dung-->
     <!-- Cột trái-->
     <div id="left-column" style="width: 250px">
+        <!--Ava và tên user-->
         <div style="margin:20px">
             <img src="images/avatar.png" height="40px" width="40px">
             <span>Tên người dùng</span>
             <hr/>
         </div>
+
+        <!-- Menu bên-->
         <div style="margin-left:40px">
             <ul class="uk-nav uk-nav-default">
-                <li class="uk-nav-header" style="font-size: 18px;padding:0;">
-                    <a href="#" style="color:black">KÊNH CỦA TÔI</a>
-                </li>
                 <li class="uk-nav-header" style="font-size: 18px;padding:0;margin-top:8px">
                     <a href="#" style="color:black">PLAYLIST CÁ NHÂN</a>
                 </li>
@@ -161,12 +161,16 @@
 
     <!--Cột phải-->
     <div id="right-column" style="width: 850px">
+        <!--Tên mục đang chọn-->
         <div style="margin:25px">
             <h4 style="font-family:sans-serif; color:blueviolet">UPDATE PLAYLIST</h4>
             <hr/>
         </div>
+        <!--Phần main content-->
         <div style="margin-left:30px; margin-right:10px">
+            <!--Ảnh bìa-->
             <img src="images/grid-image-2.jpg" style="width:200px;height:200px;float: left" />
+            <!--Phần các form-->
             <form class="uk-form-horizontal uk-margin-small">
                 <div class="uk-margin">
                     <div class="uk-form-controls">
@@ -185,6 +189,7 @@
                     </label>
                 </div>
             </form>
+            <!--Phần chọn thể loại-->
             <div style="margin-left:30px; margin-right:10px">
                 <div class="uk-padding uk-background-muted uk-width-1-2@s" style="width:476px;float:right; margin:13px;margin-top:0;padding:10px;font-size:14px;background-color:rgb(203, 255, 210)">
                     <div style="float:left; margin-right:12%">
@@ -193,43 +198,43 @@
                                 <a href="#" uk-toggle="target: #toggle-VN-List">Việt Nam</a>
                             </li>
                             <li>
-                                <a href="#" >Hàn Quốc</a>
+                                <a href="#">Hàn Quốc</a>
                             </li>
                             <li>
-                                <a href="#" >Âu Mỹ</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div style="float:left; margin-right:12%">
-                        <ul class="uk-list">
-                            <li>
-                                <a href="#" uk-toggle="target: #toggle-HN-List">Hoa Ngữ</a>
-                            </li>
-                            <li>
-                                <a href="#" >Nhật Bản</a>
-                            </li>
-                            <li>
-                                <a href="#" >Hòa Tấu</a>
+                                <a href="#">Âu Mỹ</a>
                             </li>
                         </ul>
                     </div>
                     <div style="float:left; margin-right:12%">
                         <ul class="uk-list">
                             <li>
-                                <a href="#" >Lào</a>
+                                <a href="#">Hoa Ngữ</a>
                             </li>
                             <li>
-                                <a href="#" >Myanmar</a>
+                                <a href="#">Nhật Bản</a>
+                            </li>
+                            <li>
+                                <a href="#">Hòa Tấu</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="float:left; margin-right:12%">
+                        <ul class="uk-list">
+                            <li>
+                                <a href="#">Lào</a>
+                            </li>
+                            <li>
+                                <a href="#">Myanmar</a>
                             </li>
                         </ul>
                     </div>
                     <div style="float:left">
                         <ul class="uk-list">
                             <li>
-                                <a href="#" >Campuchia</a>
+                                <a href="#">Campuchia</a>
                             </li>
                             <li>
-                                <a href="#" >Pháp</a>
+                                <a href="#">Pháp</a>
                             </li>
                         </ul>
                     </div>
@@ -237,6 +242,7 @@
                 <label class="uk-form-label" for="form-horizontal-text" style="width:80px;font-size:16px; float:right">
                     Thể loại
                 </label>
+                <!--Phần thể loại radio-->
                 <div id="toggle-VN-List" hidden class=" uk-padding uk-background-muted uk-width-1-2@s" style="width:476px;float:right; margin:13px;margin-top:0;padding:10px;font-size:14px;
                 border:1px;border-style: groove">
                     <div class="uk-form-controls" style="float:left">
@@ -268,16 +274,22 @@
                             <input class="uk-radio" type="radio" name="radio1"> Option 02</label>
                     </div>
                 </div>
-                
             </div>
+            <!--Các nút lưu, hủy-->
             <div style="float:right; width:476px">
                 <button class="uk-button uk-button-default" style="background-color:blueviolet;color:aliceblue">
                     Lưu
                 </button>
                 <a href="#" style="margin-left:20px">Hủy bỏ</a>
             </div>
+            <!--Nút đổi ảnh bìa-->
+            <div class="js-upload" uk-form-custom>
+                <input type="file" multiple>
+                <button class="uk-button uk-button-default" type="button" tabindex="-1" style="width:200px;font-size:12px">
+                    <span uk-icon="icon: image" style="margin-right:8px"></span>Đổi bìa playlist
+                </button>
+            </div>
         </div>
-
     </div>
 
     <div id="footer">
