@@ -181,7 +181,7 @@ h6 {
 *+h4,
 *+h5,
 *+h6 {
-    margin-top: 40px
+    margin-top: 20px
 }
 
 .uk-h1,
@@ -10636,17 +10636,17 @@ th.uk-text-break {
 }
 
 #left-column {
-    width: 804px;
+    width: 682px;
     min-height: 650px;
-    float:left;
-    margin-left: 200px;
+    display: inline-block;
+    /*margin-left: 200px;*/
     margin-bottom: 5px;
 }
 #right-column {
-    width: 296px;
+    width: 418px;
     min-height: 650px;
-    float:left;
-    margin-left: 3px;
+    display: inline-block;
+    /*margin-left: 3px;*/
     margin-bottom: 5px;
 }
 #realtime-chart {
@@ -10673,4 +10673,30 @@ th.uk-text-break {
     background-color: #FFE1C8;
     float: bottom;
     margin-bottom: 0px;
+}
+
+.class-row-content {
+    width: 100%;
+    text-align: center;
+}
+ 
+.content-box {
+    display: inline-block;
+}
+.content-box .left-content {
+    width: 682px;
+    display: inline-block; 
+    vertical-align: top;
+}
+.content-box .right-content{
+    width: 418px;
+    display: inline-block;
+}
+ 
+.uk-grid-small.uk-text-center.uk-grid > div {
+    
+    clear: all;
+}
+.uk-grid-small.uk-text-center.uk-grid {
+    display: inline-flex !important;
 }

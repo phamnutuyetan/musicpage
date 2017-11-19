@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Music Player
+    </title>
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="uikit/css/uikit.min.css" />
+
+
+    <!-- jQuery is required -->
+    <script src="uikit/js/jquery.min.js"></script>
+
+    <!-- UIkit JS -->
+    <script src="uikit/js/uikit.min.js"></script>
+    <script src="uikit/js/uikit-icons.min.js"></script>
+
+</head>
+
+<body style="text-align: center; position: relative;">
+    <!-- Bắt đầu tạo Sticky Navbar-->
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+        <nav class="uk-navbar-container uk-navbar" uk-navbar="" style="position: relative;z-index: 980;height: 50px;">
+
+            <!-- Phần căn giữa -->
+            <div class="uk-navbar-center">
+                <!-- Logo-->
+                <img src="images/logo.png" height="80px" width="14%" style="margin-right : 6% ">
+                <!-- Form tìm kiếm-->
+                <div class="uk-inline" style="width: 100%">
+                    <a class="uk-form-icon" href="#" uk-icon="icon: search"></a>
+                    <input class="uk-input" type="text" style="height: 30px">
+                </div>
+                <!-- <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="#">MP3</a></li>
+                    <li class="uk-active"><a href="#">NEWS</a></li>
+                    <li class="uk-active"><a href="#">TV</a></li>
+                </ul> -->
+
+                <img src="images/avatar.png" height="20px" width="20px" style="margin-left: 100px">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active">
+                        <a href="#">Hồ sơ</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <a href="#">
+                                    <li class="uk-nav-header">Trang cá nhân</li>
+                                </a>
+                                <li><a href="#">Danh sách yêu thích</a></li>
+                                <li><a href="#">Theo dõi</a></li>
+                                <li><a href="#">Nhạc Upload</a></li>
+                                <li class="uk-active"><a href="#">Nâng cấp VIP</a></li>
+                                <li class="uk-nav-divider"></li>
+                                <li><a href="#">Thoát</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div/>
+        </nav>
+    </div>
+    <!--Kết thúc Sticky Navbar-->
+
+    <!-- Bắt đầu Sub Navbar-->
+    <!-- Nếu muốn stick "uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar; offset: 50""-->
+
+    <!-- <div style="text-align: center;">
+
+        <ul class="uk-subnav uk-subnav-divider" uk-margin style="display: -webkit-inline-box;">
+            <li><a href="personal_playlist.html">Nhạc cá nhân</a></li>
+            <li><a href="topic.html">Chủ đề</a></li>
+            <li><a href="album.html">Album</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="artist.html">Nghệ sĩ</a></li>
+            <li><a href="">BXH</a></li>
+            <li><a href="">Top 100</a></li>
+            <li><a href="">Real time</a></li>
+            <li><a href="">Radio</a></li>
+            <li><a href="">VIP</a></li>
+            <li>
+                <span href="uploaded_music.html" class="uk-icon-button" uk-icon="icon: upload" style="padding-left: 8px; padding-top: 8px; margin-left: 60px"></span>                Upload nhạc
+            </li>
+        </ul>
+    </div> -->
+
+    <div id="home-content" style="text-align: center;/*overflow: auto;*/display: inline-block; position: relative;">
+        <!-- Bắt đầu chia phần nội dung-->
+        <!-- Cột trái-->
+        <div id="left-column" style="vertical-align: top">
+            <!--Slider-->
+            <div> 
+                <div class="uk-inline uk-visible-toggle uk-light">
+                    <img src="images/img20160106141412381.jpg" alt="">
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large" href="#" uk-slidenav-previous></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large" href="#" uk-slidenav-next></a>
+                </div>
+                <ul class="uk-dotnav" style="margin-left:40%; margin-top: 10px; margin-bottom:5px">
+                    <li class="uk-active"><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                    <li><a href="#">Item 4</a></li>
+                    <li><a href="#">Item 5</a></li>
+                </ul>
+            </div>
+
+            <!--Chủ đề hôm nay-->
+            <div>
+                <h4 style=""><span style="font-family: Helvetica; color: #ff3399; margin-left:10px">ĐÊM LÃNG MẠN</span></h4>
+                <div class="uk-grid-small uk-text-center" uk-grid>
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-1.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                            margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                            margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-2.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Em Là Của Anh</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Various Artist</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width: 150px; margin-left:10px; background: url(images/grid-image-3.jpg) ">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Coffee Time</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Various Artist</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-4.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Dành Cho Người Đang Yêu</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Various Artist</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-1.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-2.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width: 150px; margin-left:10px; background: url(images/grid-image-3.jpg) ">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                            margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                            margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-4.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                </div>
+            </div>   
+
+            <!--Nhạc mới-->
+            <div>
+               <h4><span style="font-family: Helvetica; color: #ff3399; margin-left:10px">NHẠC MỚI</span></h4>
+                <div class="uk-grid-small uk-text-center" uk-grid>
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-1.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                            margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                            margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-2.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Em Là Của Anh</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Various Artist</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width: 150px; margin-left:10px; background: url(images/grid-image-3.jpg) ">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Coffee Time</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Various Artist</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-4.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Dành Cho Người Đang Yêu</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Various Artist</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-1.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-2.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width: 150px; margin-left:10px; background: url(images/grid-image-3.jpg) ">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                            margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                            margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-4.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width: 150px; margin-left:10px; background: url(images/grid-image-3.jpg) ">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-4.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+
+                </div> 
+            </div>
+            
+            <!--Video hot-->
+            <div>
+               <h4><span style="font-family: Helvetica; color: #ff3399; margin-left:10px">VIDEO HOT</span></h4>
+                <div class="uk-grid-small uk-text-center" uk-grid>
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-body" style="width:150px; margin-left:10px; background: url(images/grid-video-1.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                            margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                            margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="   width:150px; margin-left:10px; background: url(images/grid-video-2.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Từ Hôm Nay</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Chi Pu</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="   width: 150px; margin-left:10px; background: url(images/grid-video-3.jpg) ">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Em Gái Mưa</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Hương Tràm</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="   width:150px; margin-left:10px; background: url(images/grid-video-4.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Sao Chẳng Thể Vì Em</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Đông Nhi</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="   width:150px; margin-left:10px; background: url(images/grid-video-1.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-body" style="width:150px; margin-left:10px; background: url(images/grid-video-2.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="width: 150px; margin-left:10px; background: url(images/grid-video-3.jpg) ">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                            margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                            margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="width:150px; margin-left:10px; background: url(images/grid-video-4.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="width: 150px; margin-left:10px; background: url(images/grid-video-3.jpg) ">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="width:150px; margin-left:10px; background: url(images/grid-video-4.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+
+                </div> 
+            </div>
+            
+            <!--Album hot-->
+            <div>
+                <h4><span style="font-family: Helvetica; color: #ff3399; margin-left:10px">ALBUM HOT</span></h4>
+                <div class="uk-grid-small uk-text-center" uk-grid>
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-1.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                            margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                            margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-2.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Em Là Của Anh</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Various Artist</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width: 150px; margin-left:10px; background: url(images/grid-image-3.jpg) ">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Coffee Time</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Various Artist</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-4.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Dành Cho Người Đang Yêu</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Various Artist</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-1.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-2.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width: 150px; margin-left:10px; background: url(images/grid-image-3.jpg) ">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                            margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                            margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-4.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width: 150px; margin-left:10px; background: url(images/grid-image-3.jpg) ">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+                    <div style=" padding-left:0px">
+                        <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-4.jpg)">
+                        </div>
+                        <p style="color:black; font-family:Helvetica; text-align: left; 
+                        margin:0; width:150px; margin-left:10px">Chạm Khẽ Tim Anh Một Chút Thôi</p>
+                        <p style="font-family:Helvetica; text-align: left; font-size:13px;
+                        margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
+                    </div>
+
+                </div> 
+            </div>  
+
+            <!--Nghệ sĩ hot-->
+            <div>
+                <h4><span style="font-family: Helvetica; color: #ff3399; margin-left:10px">NGHỆ SĨ HOT</span></h4>
+                <div id="left-singer-grid" style="display: inline-flex; vertical-align: top; float: none;">
+                    <div style="height: 250px; width:250px">
+                        <div class="uk-text-center">
+                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                                <img src="images/singer-1.jpg" alt="">
+                                <div class="uk-position-center">
+                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 240px; width:240px">
+                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 113px">Bích Phương</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="right-singer-grid" style="display: inline-flex; vertical-align: top; float: none;">
+                    <div class="uk-grid-small uk-text-center" uk-grid>
+                        <div class="uk-text-center" style="padding:0; padding-left:3px">
+                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                                <img src="images/singer-2.jpg" alt="" style="width: 100px; height:112px">
+                                <div class="uk-position-center">
+                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-text-center" style="padding:0">
+                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                                <img src="images/singer-3.jpg" alt="" style="width: 100px; height:112px">
+                                <div class="uk-position-center">
+                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-text-center" style="padding:0">
+                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                                <img src="images/singer-4.jpg" alt="" style="width: 100px; height:112px">
+                                <div class="uk-position-center">
+                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-text-center" style="padding:0">
+                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                                <img src="images/singer-5.jpg" alt="" style="width: 100px; height:112px">
+                                <div class="uk-position-center">
+                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-text-center" style="padding:0">
+                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                                <img src="images/singer-6.jpg" alt="" style="width: 100px; height:112px">
+                                <div class="uk-position-center">
+                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-text-center" style="padding:0;padding-left:3px">
+                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                                <img src="images/singer-6.jpg" alt="" style="width: 100px; height:112px">
+                                <div class="uk-position-center">
+                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-text-center" style="padding:0">
+                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                                <img src="images/singer-3.jpg" alt="" style="width: 100px; height:112px">
+                                <div class="uk-position-center">
+                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-text-center" style="padding:0">
+                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                                <img src="images/singer-4.jpg" alt="" style="width: 100px; height:112px">
+                                <div class="uk-position-center">
+                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-text-center" style="padding:0">
+                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                                <img src="images/singer-5.jpg" alt="" style="width: 100px; height:112px">
+                                <div class="uk-position-center">
+                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-text-center" style="padding:0">
+                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                                <img src="images/singer-3.jpg" alt="" style="width: 100px; height:112px">
+                                <div class="uk-position-center">
+                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div> 
+        </div>
+            
+
+        <!--Cột phải-->
+        <div id="right-column" style="vertical-align: top">
+            <!-- Card chủ đề-->
+            <div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body" style="height:92px; 
+                    margin-bottom:5px; background: url(images/card-img1.jpg); background-repeat: round;">
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body" style="height:92px; 
+                        margin-bottom:5px; background: url(images/card-img2.jpg); background-repeat: round;">
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body" style="height:92px; 
+                        margin-bottom:5px; background: url(images/card-img3.jpg); background-repeat: round;">
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default uk-card-body" style="height:92px; 
+                        margin-bottom:5px; background: url(images/card-img4.jpg); background-repeat: round;">
+                    </div>
+                </div>
+                <p style="margin:0"><a href="#">Xem thêm chủ đề ></a></p>
+            </div>
+            
+            <!-- Realtime Chart-->
+            <div>
+                <h4><span style="font-family: Helvetica; color: #ff3399; margin-left:10px">REALTIME CHART</span></h4>
+                <div id="realtime-chart">
+                </div>
+            </div>
+            
+
+            <!--BXH bài hát-->
+            <div>
+               <h4><span style="font-family: Helvetica; color: #ff3399; margin-left:10px">BXH BÀI HÁT</span></h4>
+                <div>
+                    <ul class="uk-child-width-expand" uk-tab>
+                        <li class="uk-active"><a href="#">Việt Nam</a></li>
+                        <li><a href="#">Us-Uk</a></li>
+                        <li><a href="#">KPOP</a></li>
+                    </ul>
+                </div>
+                <div class="uk-card-header" style="padding: 0; padding-left: 10px">
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <div class="uk-width-auto">
+                            <h5>01</h5>
+                        </div>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <div class="uk-width-auto">
+                            <h5>02</h5>
+                        </div>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <div class="uk-width-auto">
+                            <h5>03</h5>
+                        </div>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <div class="uk-width-auto">
+                            <h5>04</h5>
+                        </div>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <div class="uk-width-auto">
+                            <h5>05</h5>
+                        </div>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <div class="uk-width-auto">
+                            <h5>06</h5>
+                        </div>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            
+
+            <!--BXH Album-->
+            <div>
+                <h4><span style="font-family: Helvetica; color: #ff3399; margin-left:10px">BXH ALBUM</span></h4>
+                <div>
+                    <ul class="uk-child-width-expand" uk-tab>
+                        <li class="uk-active"><a href="#">Việt Nam</a></li>
+                        <li><a href="#">Us-Uk</a></li>
+                        <li><a href="#">KPOP</a></li>
+                    </ul>
+                </div>
+                <div class="uk-card-header" style="padding: 0; padding-left: 10px">
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <img src="images/grid-image-2.jpg" style="width:115px;height:100px"/>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <img src="images/grid-image-3.jpg" style="width:115px;height:100px"/>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <img src="images/grid-image-4.jpg" style="width:115px;height:100px"/>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <img src="images/grid-image-1.jpg" style="width:115px;height:100px">
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <img src="images/grid-image-2.jpg" style="width:115px;height:100px"/>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <img src="images/grid-image-3.jpg" style="width:115px;height:100px"/>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!--BXH Video-->
+            <div>
+               <h4><span style="font-family: Helvetica; color: #ff3399; margin-left:10px">BXH VIDEO</span></h4>
+                <div>
+                    <ul class="uk-child-width-expand" uk-tab>
+                        <li class="uk-active"><a href="#">Việt Nam</a></li>
+                        <li><a href="#">Us-Uk</a></li>
+                        <li><a href="#">KPOP</a></li>
+                    </ul>
+                </div>
+                <div class="uk-card-header" style="padding: 0; padding-left: 10px">
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <img src="images/grid-video-2.jpg" style="width:125px;height:66px"/>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <img src="images/grid-video-3.jpg" style="width:125px;height:66px"/>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <img src="images/grid-video-4.jpg" style="width:125px;height:66px"/>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <img src="images/grid-video-1.jpg" style="width:125px;height:66px">
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <img src="images/grid-video-2.jpg" style="width:125px;height:66px"/>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+                        </div>
+                    </div>
+                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+                        <img src="images/grid-video-3.jpg" style="width:125px;height:66px"/>
+                        <div class="uk-width-expand">
+                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>      
+    </div>
+
+    <div id="footer" style="position: absolute; width: 100%; border: none">
+
+    </div>
+
+    <script>
+        $(window).resize(()=>{
+            console.log("hihi");
+            if(window.innerWidth <= 1300){
+                $("#home-content").css("width", "100%");
+                $("#left-column").css({"width": "95%", "padding": "2.5%"});
+                $("body").css("font-size", "30px !important");
+                $("#right-singer-grid").css({"width": "100%", "height":"300px"});
+            }
+            else{
+                 $("#home-content").css("width", "max-content");
+                $("#left-column").css({"width": "682px", "padding": "0px"});
+                $("body").css("font-size", "14px !importan");
+                $("#right-singer-grid").css({"width": "540px", "height":"400px"});
+
+            }
+        });
+
+        $("#left-column > h4").css("text-align", "left");
+    </script>
+</body>
+
+</html>
