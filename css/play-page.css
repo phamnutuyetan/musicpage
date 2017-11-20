@@ -1,0 +1,327 @@
+.common-btn {
+	padding: 10px 20px;
+    border: 0 none;
+    font-size: 14px;
+    background-color: #006666;
+    width: 100%; 
+    height: 50px; 
+    color: #fff;
+}
+
+.common-btn:hover {
+	
+}
+.lp-vertical-nav {
+ position: fixed;
+ height: 100%;
+ width: 50px;
+ /*max-width: 50px;*/
+ background-color: #3b4343;
+ z-index: 981;
+}
+
+.lp-vertical-nav .nav-box {
+	width: 100%;
+	background-color: transparent;
+	text-align: center;
+}
+.lp-vertical-nav .nav-box:hover {
+	background-color: #003333;
+}
+
+.lp-vertical-nav .nav-box:hover .lp-vertical-nav .nav-box > .uk-navbar-dropdown {
+    display: initial;
+}
+
+.lp-vertical-nav .nav-box >img {
+	width: 60%;
+	/*margin-top: 10px;*/
+}
+
+.lp-vertical-nav .nav-box >p {
+	color: white;
+	font-weight: 700;
+	margin: 0px;
+	
+
+}
+
+.lp-content {
+	background-color: #f8f8f8;
+	/*height: 1000px;*/
+	padding-left: 120px;
+}
+
+.main-content {
+	max-width: 1280px;
+	margin: 0px auto;
+	/*height: 400px;*/
+
+}
+
+.music-content {
+	width: 68%;
+	float:left;
+	height: 400px;
+}
+
+.mc-top {
+	padding: 20px;
+	overflow: auto;
+	font-size: 14px;
+}
+
+.mc-top .mc-left{
+	padding-top: 20px;
+	float: left;
+	text-align: center;
+	color: white;
+	width: 25%;
+}
+
+.mc-top .mc-right{
+	float: left;
+	text-align: center;
+	color: white;
+	width: 70%;
+}
+
+.mc-right .ls-scroll-bar {
+	height: 170px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.mc-right img {
+	padding: 10px;
+	cursor: pointer;
+}
+
+.music-content .mc-bottom {
+	display: block;
+	clear: left;
+}
+.music-content .mc-bottom img{
+	width: 20px;
+	text-align: center;
+}
+	
+
+.other-song{
+	height: 400px;
+	width: 30%;
+	float: left;
+	background-color: #426767;
+}
+.comment{
+	height: 300px;
+	display: block;
+}
+
+.mc-bottom {
+	width: 100%;
+	text-align: center;
+}
+
+.mc-bottom img {
+	cursor: pointer;
+}
+
+.mc-bottom progress {
+	height: 8px;
+	width: 85%;
+	border: 0px none;
+	-webkit-appearance: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#play-status{
+	color: white;
+}
+
+#ls-cur {
+	position: absolute;
+	left: 100px;
+	top: -10px;
+}
+#ls-end {
+	position: absolute;
+	right: 30px;
+	top: -10px;
+}
+
+.mc-bottom progress[name="mp3-status"]::-webkit-progress-bar {
+	background: #e5eaf4;
+	border-radius: 5px;
+}
+.mc-bottom progress[name="mp3-status"]::-webkit-progress-value {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	background: #00ff99;
+}
+
+.mc-bottom progress[name="mp3-status"]::-moz-progress-bar {
+	background-color: #00ff99;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.sss {  position: relative; }
+
+.sss:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url('../images/play-page/Cosaogiolaichiaxa.png');
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    background-size: 100% 100% ;
+   opacity: 0.3;
+}
+
+.sssa {
+    position: relative; 
+    z-index: 2;
+}​
+
+.list-other-song {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.list-other-song p:hover {
+	color: #00ff99;
+}
+
+
+.list-other-song .ls-item{
+	height: 50px;
+	padding: 5px;
+	border-bottom: #6a9090 dashed 1px;
+	position: relative;
+	margin: 0px 10px;
+	padding-bottom: 10px;
+}
+
+.ls-item img{
+	display: inline-block;
+	height: 50px;
+}
+
+.ls-content {
+	display: inline-block;
+	color: #fff;
+	font-size: 12px;
+
+}
+
+.ls-content .ls-title {
+	margin: 0px;
+	cursor: pointer;
+}
+
+.ls-content .ls-body {
+	margin: 0px;
+	cursor: pointer;
+}
+
+.ls-icon {
+	position: absolute;
+	right: 20px;
+	bottom: 5px;
+}
+
+.ls-icon img {
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+}
+.ls-icon img:hover {
+	
+}
+
+.ls-comment {
+	clear:both;
+	width: 66%;
+	padding: 1%; 
+
+}
+
+.comment-item {
+	height: max-content;
+	width: 100%;
+	line-height: 1.5;
+	position: relative;
+	padding: 10px 0;
+}
+
+.comment-item p {
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+}
+
+.comment-item img{
+	height: 48px;
+	float: left;
+}
+
+.comment-item .item-content {
+	padding-left: 60px;
+	padding-bottom: 10px;
+}
+
+.comment-item .item-content .item-name {
+	font-weight: bold;
+    color: #365899;
+    cursor: pointer;
+}
+.comment-item .time-comment {
+	position: absolute;
+    top: 2px;
+    right: 10px;
+    font-size: 13px;
+}
+
+.ls-scroll-bar::-webkit-scrollbar {
+    width: 0px;
+    background-color: #F5F5F5;
+}
+
+.ls-scroll-bar::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+.ls-scroll-bar::-webkit-scrollbar-track {
+	 background-color: #F5F5F5;
+}
+
+.frm-comment {
+	width: 100%;
+}
+.frm-comment .fn-useravatar{
+	 display: inline-block;
+	 vertical-align: top;
+	 width: 50px;
+	 height: 50px;
+}
+.frm-comment .wrap-comment{
+	display: inline-block;
+	width: calc(100% - 70px);
+}
+.frm-comment .btn-comment{
+    background: #006666;
+    color: #fff;
+    float: right;
+    width: 100px;
+    height: 30px;
+}
+
+.btn-comment:hover {
+	background: #0f9;
+	color: #006666;
+}

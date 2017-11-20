@@ -8,6 +8,7 @@
 
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="uikit/css/uikit.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/play-page.css">
 
 
     <!-- jQuery is required -->
@@ -21,6 +22,42 @@
 
 <body style="text-align: center; position: relative;">
     <!-- Bắt đầu tạo Sticky Navbar-->
+    <div class="lp-vertical-nav">
+        <!-- <div style="height: 120px">
+        </div> -->
+        <div id="lp-vertical-nav-content" style="vertical-align: middle; display: inline-block;">
+            <div class="nav-box">
+                <img src="images/play-page/home-xxl.png">
+                <p>HOME</p>
+            </div>
+            <div class="nav-box" style="background-color: #003333;">
+                <img src="images/play-page/images.png">
+                <p>NGHE</p>
+            </div>
+            <div class="nav-box">
+                <img src="images/play-page/profile.png">
+                <p>TÔI</p>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <a href="#">
+                            <li class="uk-nav-header">Trang cá nhân</li>
+                        </a>
+                        <li><a href="#">Danh sách yêu thích</a></li>
+                        <li><a href="#">Theo dõi</a></li>
+                        <li><a href="#">Nhạc Upload</a></li>
+                        <li class="uk-active"><a href="#">Nâng cấp VIP</a></li>
+                        <li class="uk-nav-divider"></li>
+                        <li><a href="#">Thoát</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-box">
+                <img src="images/play-page/contact.png">
+                <p>LIÊN HỆ</p>
+            </div>
+        </div>
+        
+    </div>
     <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
         <nav class="uk-navbar-container uk-navbar" uk-navbar="" style="position: relative;z-index: 980;height: 50px;">
 
@@ -86,7 +123,7 @@
         </ul>
     </div> -->
 
-    <div id="home-content" style="text-align: center;/*overflow: auto;*/display: inline-block; position: relative;">
+    <div id="home-content" style="text-align: center;/*overflow: auto;*/display: inline-block; position: relative; margin-left: 50px; ">
         <!-- Bắt đầu chia phần nội dung-->
         <!-- Cột trái-->
         <div id="left-column" style="vertical-align: top">
@@ -110,7 +147,7 @@
             <div id="left-col-row2">
                 <h4 style=""><span style="font-family: Helvetica; color: #ff3399; margin-left:10px">ĐÊM LÃNG MẠN</span></h4>
                 <div class="uk-grid-small uk-text-center" uk-grid>
-                    <div>
+                    <div style="padding-left: 0px">
                         <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-1.jpg)">
                         </div>
                         <p style="color:black; font-family:Helvetica; text-align: left; 
@@ -150,7 +187,7 @@
                         <p style="font-family:Helvetica; text-align: left; font-size:13px;
                         margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
                     </div>
-                    <div>
+                    <div style="padding-left: 0px">
                         <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-2.jpg)">
                         </div>
                         <p style="color:black; font-family:Helvetica; text-align: left; 
@@ -181,7 +218,7 @@
             <div id="left-col-row3">
                <h4><span style="font-family: Helvetica; color: #ff3399; margin-left:10px">NHẠC MỚI</span></h4>
                 <div class="uk-grid-small uk-text-center" uk-grid>
-                    <div>
+                    <div style="padding-left: 0px;">
                         <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-1.jpg)">
                         </div>
                         <p style="color:black; font-family:Helvetica; text-align: left; 
@@ -221,7 +258,7 @@
                         <p style="font-family:Helvetica; text-align: left; font-size:13px;
                         margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
                     </div>
-                    <div>
+                    <div style="padding-left: 0px">
                         <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-2.jpg)">
                         </div>
                         <p style="color:black; font-family:Helvetica; text-align: left; 
@@ -253,7 +290,7 @@
             <div id="left-col-row4">
                 <h4><span style="font-family: Helvetica; color: #ff3399; margin-left:10px">ALBUM HOT</span></h4>
                 <div class="uk-grid-small uk-text-center" uk-grid>
-                    <div>
+                    <div style="padding-left: 0px">
                         <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-1.jpg)">
                         </div>
                         <p style="color:black; font-family:Helvetica; text-align: left; 
@@ -293,7 +330,7 @@
                         <p style="font-family:Helvetica; text-align: left; font-size:13px;
                         margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
                     </div>
-                    <div>
+                    <div style="padding-left: 0px">
                         <div class="uk-card uk-card-default uk-card-body" style="height: 150px; width:150px; margin-left:10px; background: url(images/grid-image-2.jpg)">
                         </div>
                         <p style="color:black; font-family:Helvetica; text-align: left; 
@@ -324,7 +361,7 @@
             <div id="left-col-row5">
                <h4><span style="font-family: Helvetica; color: #ff3399; margin-left:10px">VIDEO HOT</span></h4>
                 <div class="uk-grid-small uk-text-center" uk-grid>
-                    <div>
+                    <div style="padding-left: 0px">
                         <div class="uk-card uk-card-default uk-card-body" style="width:150px; margin-left:10px; background: url(images/grid-video-1.jpg)">
                         </div>
                         <p style="color:black; font-family:Helvetica; text-align: left; 
@@ -364,7 +401,7 @@
                         <p style="font-family:Helvetica; text-align: left; font-size:13px;
                         margin:0; width:150px; margin-left:10px">Noo Phước Thịnh</p>
                     </div>
-                    <div>
+                    <div style="padding-left: 0px">
                         <div class="uk-card uk-card-default uk-card-body" style="width:150px; margin-left:10px; background: url(images/grid-video-2.jpg)">
                         </div>
                         <p style="color:black; font-family:Helvetica; text-align: left; 
@@ -393,127 +430,113 @@
             </div> 
 
             <!--Nghệ sĩ hot-->
-            <div>
+            <div id="left-col-row6">
                 <h4><span style="font-family: Helvetica; color: #ff3399; margin-left:10px">NGHỆ SĨ HOT</span></h4>
-                <div id="left-singer-grid" style="display: inline-flex; vertical-align: top; float: none;">
-                    <div style="height: 250px; width:250px">
-                        <div class="uk-text-center">
-                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
-                                <img src="images/singer-1.jpg" alt="">
-                                <div class="uk-position-center">
-                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 240px; width:240px">
-                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 113px">Bích Phương</p>
-                                    </div>
+                <!-- <div id="right-singer-grid" style="display: inline-flex; vertical-align: top; float: none;"> -->
+                <div class="uk-grid-small uk-text-center uk-grid" >
+                    <div class="uk-text-center" style="padding:0; padding-left:0px">
+                        <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                            <img src="images/singer-2.jpg" alt="" style="width: 100px; height:112px">
+                            <div class="uk-position-center">
+                                <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                    <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="right-singer-grid" style="display: inline-flex; vertical-align: top; float: none;">
-                    <div class="uk-grid-small uk-text-center" uk-grid>
-                        <div class="uk-text-center" style="padding:0; padding-left:3px">
-                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
-                                <img src="images/singer-2.jpg" alt="" style="width: 100px; height:112px">
-                                <div class="uk-position-center">
-                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
-                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
-                                    </div>
+                    <div class="uk-text-center" style="padding:0">
+                        <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                            <img src="images/singer-3.jpg" alt="" style="width: 100px; height:112px">
+                            <div class="uk-position-center">
+                                <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                    <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="uk-text-center" style="padding:0">
-                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
-                                <img src="images/singer-3.jpg" alt="" style="width: 100px; height:112px">
-                                <div class="uk-position-center">
-                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
-                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
-                                    </div>
+                    </div>
+                    <div class="uk-text-center" style="padding:0">
+                        <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                            <img src="images/singer-4.jpg" alt="" style="width: 100px; height:112px">
+                            <div class="uk-position-center">
+                                <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                    <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="uk-text-center" style="padding:0">
-                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
-                                <img src="images/singer-4.jpg" alt="" style="width: 100px; height:112px">
-                                <div class="uk-position-center">
-                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
-                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
-                                    </div>
+                    </div>
+                    <div class="uk-text-center" style="padding:0">
+                        <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                            <img src="images/singer-5.jpg" alt="" style="width: 100px; height:112px">
+                            <div class="uk-position-center">
+                                <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                    <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="uk-text-center" style="padding:0">
-                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
-                                <img src="images/singer-5.jpg" alt="" style="width: 100px; height:112px">
-                                <div class="uk-position-center">
-                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
-                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
-                                    </div>
+                    </div>
+                    <div class="uk-text-center" style="padding:0">
+                        <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                            <img src="images/singer-6.jpg" alt="" style="width: 100px; height:112px">
+                            <div class="uk-position-center">
+                                <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                    <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="uk-text-center" style="padding:0">
-                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
-                                <img src="images/singer-6.jpg" alt="" style="width: 100px; height:112px">
-                                <div class="uk-position-center">
-                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
-                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
-                                    </div>
+                    </div>
+                    <div class="uk-text-center" style="padding:0;padding-left:3px">
+                        <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                            <img src="images/singer-6.jpg" alt="" style="width: 100px; height:112px">
+                            <div class="uk-position-center">
+                                <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                    <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="uk-text-center" style="padding:0;padding-left:3px">
-                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
-                                <img src="images/singer-6.jpg" alt="" style="width: 100px; height:112px">
-                                <div class="uk-position-center">
-                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
-                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
-                                    </div>
+                    </div>
+                    <div class="uk-text-center" style="padding:0">
+                        <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                            <img src="images/singer-3.jpg" alt="" style="width: 100px; height:112px">
+                            <div class="uk-position-center">
+                                <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                    <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="uk-text-center" style="padding:0">
-                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
-                                <img src="images/singer-3.jpg" alt="" style="width: 100px; height:112px">
-                                <div class="uk-position-center">
-                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
-                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
-                                    </div>
+                    </div>
+                    <div class="uk-text-center" style="padding:0">
+                        <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                            <img src="images/singer-4.jpg" alt="" style="width: 100px; height:112px">
+                            <div class="uk-position-center">
+                                <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                    <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="uk-text-center" style="padding:0">
-                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
-                                <img src="images/singer-4.jpg" alt="" style="width: 100px; height:112px">
-                                <div class="uk-position-center">
-                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
-                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
-                                    </div>
+                    </div>
+                    <div class="uk-text-center" style="padding:0">
+                        <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                            <img src="images/singer-5.jpg" alt="" style="width: 100px; height:112px">
+                            <div class="uk-position-center">
+                                <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                    <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="uk-text-center" style="padding:0">
-                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
-                                <img src="images/singer-5.jpg" alt="" style="width: 100px; height:112px">
-                                <div class="uk-position-center">
-                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
-                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
-                                    </div>
+                    </div>
+                    <div class="uk-text-center" style="padding:0">
+                        <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
+                            <img src="images/singer-3.jpg" alt="" style="width: 100px; height:112px">
+                            <div class="uk-position-center">
+                                <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
+                                    <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="uk-text-center" style="padding:0">
-                            <div class="uk-inline-clip uk-transition-toggle uk-light" style="margin-left: 10px">
-                                <img src="images/singer-3.jpg" alt="" style="width: 100px; height:112px">
-                                <div class="uk-position-center">
-                                    <div class="uk-transition-scale-up uk-overlay-primary" style="height: 100px; width:100px">
-                                        <p class="uk-margin-remove" style="font-family: Helvetica; font-size:14px; padding-top: 43px">Quang Dũng</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
 
-                    </div>
                 </div>
+                <!-- </div> -->
             </div> 
         </div>
             
@@ -634,7 +657,7 @@
             <!--BXH Album-->
             <div id="right-col-row4">
                 <h4><span style="font-family: Helvetica; color: #ff3399; margin-left:10px">BXH ALBUM</span></h4>
-                <div>
+                <div >
                     <ul class="uk-child-width-expand" uk-tab>
                         <li class="uk-active"><a href="#">Việt Nam</a></li>
                         <li><a href="#">Us-Uk</a></li>
@@ -684,7 +707,7 @@
             <!--BXH Video-->
             <div id="right-col-row5">
                <h4><span style="font-family: Helvetica; color: #ff3399; margin-left:10px">BXH VIDEO</span></h4>
-                <div>
+                <div >
                     <ul class="uk-child-width-expand" uk-tab>
                         <li class="uk-active"><a href="#">Việt Nam</a></li>
                         <li><a href="#">Us-Uk</a></li>
@@ -747,31 +770,44 @@
         $("#left-column > div > h4").css("text-align", "left");
         $("#right-column > div").css("margin-top", "10px");
         $("#left-column > div").css("margin-top", "10px");
+        $("#left-col-row6 > .uk-grid-small.uk-text-center.uk-grid > div").css("margin-bottom", "10px");
+        
+       // $(".uk-grid-margin").css("padding-left", "0px");
         setStyleElement();
         function setStyleElement() {
-            if(window.innerWidth <= 1300){
-                $("#home-content").css("width", "100%");
+            if(window.innerWidth < 1280){
+                $("#home-content").css({"width": "85%","margin-left": "10%"});
                 $("#left-column").css({"width": "95%", "padding": "2.5%"});
-                $("body").css("font-size", "30px !important");
-                $("#right-singer-grid").css({"width": "100%", "height":"300px"});
+                //$("body").css("font-size", "50px !important");
+                $("#right-singer-grid").css({"width": "70%", "height":"300px"});
+                $(".lp-vertical-nav").css("width", "10%");
             }
             else{
-                 $("#home-content").css("width", "max-content");
+                 $("#home-content").css({"width":"max-content","margin-left":"5%"});
                 $("#left-column").css({"width": "682px", "padding": "0px"});
-                $("body").css("font-size", "14px !importan");
-                $("#right-singer-grid").css({"width": "540px", "height":"400px"});
+                //$("body").css("font-size", "14px !importan");
+                //$("#right-singer-grid").css({"width": "540px", "height":"400px"});
+                $(".lp-vertical-nav").css("width", "5%");
                 setEqualRow();
 
             }
+            setLeftNavPositon();
         }
 
         function setEqualRow(){
-            for(let i = 1; i < 6; i++) {
+            for(let i = 1; i < 5; i++) {
                 $("#right-col-row" + i).css("height", $("#left-col-row" + i).innerHeight());
-                let a = $("#right-col-row" + i);
-                let b = $("#left-col-row" + i);
-                console.log(i, "  ", a.innerHeight(), "  ", b.innerHeight());
             }
+        }
+
+        function setLeftNavPositon() {
+            let top = $(".lp-vertical-nav").innerHeight() - $("#lp-vertical-nav-content").innerHeight();
+            if(top > 0) {
+                $("#lp-vertical-nav-content").css("margin-top", top/2);
+                return;
+            }
+
+            $("#lp-vertical-nav-content").css("margin-top", 0);
         }
 
         $(window).resize(()=>{

@@ -10700,3 +10700,7 @@ th.uk-text-break {
 .uk-grid-small.uk-text-center.uk-grid {
     display: inline-flex !important;
 }
+
+.lp-vertical-nav .nav-box:hover .nav-box > .uk-navbar-dropdown {
+    display: initial;
+}
