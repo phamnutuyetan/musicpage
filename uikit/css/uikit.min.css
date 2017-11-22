@@ -3220,7 +3220,7 @@ ul.uk-nav-sub {
 
 .uk-navbar-dropdown-nav>li>a:focus,
 .uk-navbar-dropdown-nav>li>a:hover {
-    color: #666
+    color: #009efa;
 }
 
 .uk-navbar-dropdown-nav>li.uk-active>a {
@@ -3241,7 +3241,7 @@ ul.uk-nav-sub {
 
 .uk-navbar-dropdown-nav .uk-nav-sub a:focus,
 .uk-navbar-dropdown-nav .uk-nav-sub a:hover {
-    color: #666
+    color: #009efa;
 }
 
 .uk-navbar-dropbar {
@@ -10671,9 +10671,14 @@ th.uk-text-break {
     height: 100px;
     clear: both;
     border: 1px solid #CDCDCD;
-    background-color: #FFE1C8;
+    background-color: #47515C;
+    color: #fff;
     float: bottom;
     margin-bottom: 0px;
+}
+
+#footer a {
+    color: #fff;
 }
 
 .class-row-content {
@@ -10695,11 +10700,12 @@ th.uk-text-break {
 }
  
 .uk-grid-small.uk-text-center.uk-grid > div {
-    
+    margin: 0px;
     clear: all;
 }
 .uk-grid-small.uk-text-center.uk-grid {
     display: inline-flex !important;
+    margin: 0px;
 }
 
 .right-col-row1>div>div{
@@ -10709,6 +10715,30 @@ th.uk-text-break {
 
 #right-column > div{
     vertical-align: top;
-    width: 420PX;
+    width: 418px;
     display: inline-block;
+}
+
+.text-link {
+    cursor: pointer;
+}
+
+.text-link:hover {
+    color: #009efa;
+}
+
+#home-content span {
+        cursor: pointer;
+}
+
+#home-content span:hover{
+    border-bottom: 1px solid #009efa;
+}
+
+#home-content p{
+    cursor: pointer;
+}
+
+#home-content p:hover {
+    color: #009efa !important; 
 }

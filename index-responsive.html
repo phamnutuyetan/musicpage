@@ -9,7 +9,7 @@
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="uikit/css/uikit.min.css" />
     <link rel="stylesheet" type="text/css" href="css/play-page.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 
 
     <!-- jQuery is required -->
@@ -55,27 +55,7 @@
                     <p>Nghệ sĩ</p>
                 </div>
                 <div class="nav-box">
-                    <img src="images/play-page/contact1.png">
-                    <p>Liên hệ</p>
-                </div>
-                <div class="nav-box">
-                    <img src="images/play-page/contact1.png">
-                    <p>Liên hệ</p>
-                </div>
-                <div class="nav-box">
-                    <img src="images/play-page/contact1.png">
-                    <p>Liên hệ</p>
-                </div>
-                <div class="nav-box">
-                    <img src="images/play-page/contact1.png">
-                    <p>Liên hệ</p>
-                </div>
-                <div class="nav-box">
-                    <img src="images/play-page/contact1.png">
-                    <p>Liên hệ</p>
-                </div>
-                <div class="nav-box">
-                    <img src="images/play-page/contact1.png">
+                    <img src="images/play-page/contacts1.png">
                     <p>Liên hệ</p>
                 </div>
             </div>
@@ -88,7 +68,7 @@
             <!-- Phần căn giữa -->
             <div class="uk-navbar-center">
                 <!-- Logo-->
-                <img src="images/logo.png" height="80px" width="14%" style="margin-right : 6% ">
+                <img src="images/logo2.png" height="70px" width="14%" style="margin-right : 6% ">
                 <!-- Form tìm kiếm-->
                 <div class="uk-inline" style="width: 100%">
                     <a class="uk-form-icon" href="#" uk-icon="icon: search"></a>
@@ -100,21 +80,21 @@
                     <li class="uk-active"><a href="#">TV</a></li>
                 </ul> -->
 
-                <img src="images/avatar.png" height="20px" width="20px" style="margin-left: 100px">
+                <img src="images/avatar.png" height="20px" width="20px" style="margin-left: 20px">
                 <ul class="uk-navbar-nav">
                     <li class="uk-active">
                         <a href="#">Hồ sơ</a>
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 <a href="#">
-                                    <li class="uk-nav-header">Trang cá nhân</li>
+                                    <li class="uk-nav-header text-link">Trang cá nhân</li>
                                 </a>
-                                <li><a href="#">Danh sách yêu thích</a></li>
-                                <li><a href="#">Theo dõi</a></li>
-                                <li><a href="#">Nhạc Upload</a></li>
-                                <li class="uk-active"><a href="#">Nâng cấp VIP</a></li>
-                                <li class="uk-nav-divider"></li>
-                                <li><a href="#">Thoát</a></li>
+                                <li><a href="#" class="text-link">Danh sách yêu thích</a></li>
+                                <li><a href="#" class="text-link">Theo dõi</a></li>
+                                <li><a href="#" class="text-link">Nhạc Upload</a></li>
+                                <li class="uk-active"><a href="#" class="text-link">Nâng cấp VIP</a></li>
+                                <li class="uk-nav-divider text-link"></li>
+                                <li><a href="#" class="text-link">Thoát</a></li>
                             </ul>
                         </div>
                     </li>
@@ -568,7 +548,7 @@
         <!--Cột phải-->
         <div id="right-column" style="vertical-align: top; text-align: initial;">
             <!-- Card chủ đề-->
-            <div id="right-col-row1 col-sm-6" style="font-size: 25px; font-weight: 300">
+            <div id="right-col-row1" style="font-size: 25px; font-weight: 300;">
                 <div>
                     <div class="uk-card uk-card-default uk-card-body" style="height:92px; 
                     margin-bottom:5px; background: url(images/hinh1.png); background-repeat: round; color: white; padding: 30px">NHẠC NỔI BẬT
@@ -589,13 +569,13 @@
                         margin-bottom:5px; background: url(images/hinh4.png); background-repeat: round; color: white; padding: 30px">NHẠC CHO TÌNH YÊU
                     </div>
                 </div>
-                <p style="margin:0"><a href="#">Xem thêm chủ đề ></a></p>
+                <p style="margin:0; font-size: 15px"><a href="#">Xem thêm chủ đề ></a></p>
             </div>
             
             <!-- Realtime Chart-->
-            <div id="right-col-row2 col-sm-6">
+            <div id="right-col-row2">
                 <h4><span style="/*font-family:Helvetica*/ color: #ff3399; margin-left:10px;">REALTIME CHART</span></h4>
-                <div id="realtime-chart" style="width: 99%; height: 445px">
+                <div id="realtime-chart" style="width: 99%; height: 445px; background-image: url(images/real-chart.PNG);">
                 </div>
             </div>
             
@@ -786,10 +766,10 @@
         </div>      
     </div>
 
-    <div id="footer" style="position: absolute; width: 100%; border: none; height: 200px">
+    <div id="footer" style="position: absolute; width: 100%; border: none; height: fit-content; padding: 10px 0px; margin-top: 10px">
         <div class="content-footer">
-            <div class="content-footer-left" itemscope="" itemtype="http://schema.org/Organization" style="display: inline-block;">
-                <img itemprop="logo" src="https://zmp3-static.zadn.vn/skins/zmp3-v5.1/images/icon_zing_mp3_60.png" height="56" width="56" alt="Zing MP3 - Đỉnh Cao Âm Nhạc">
+            <div class="content-footer-left" itemscope="" itemtype="http://schema.org/Organization" style="display: inline-block; vertical-align: top">
+                <img itemprop="logo" src="images/logo2.png" height="56" width="56" alt="Zing MP3 - Đỉnh Cao Âm Nhạc">
                 <p>© 2015 4CONANG Corporation</p>
                 <p>Giấy phép MXH số 314/GP-BTTTT.</p>
             </div>
@@ -812,7 +792,10 @@
     </div>
 
     <script>
-        var isOpenNav = false;
+        var navBar = {
+            isOpenNav: false,
+            width: "50px"
+        }
 
         $("#left-column > div > h4").css("text-align", "left");
         $("#right-column > div").css("margin-top", "10px");
@@ -829,17 +812,19 @@
         }
 
          function setWidthNav(){
-            if(isOpenNav) {
+            if(navBar.isOpenNav) {
                 $("#btn-close-open").css({"transform":"rotate(0deg)"});
-                isOpenNav = false;
-                $(".lp-vertical-nav").css("width", "50px");
-                $("#home-content").css({"width":"max-content","margin-left":"50px"});
+                navBar.isOpenNav = false;
+                navBar.width = "50px";
+
+                $(".lp-vertical-nav").css("width", navBar.width);
             }else{
                 $("#btn-close-open").css({"transform":"rotate(180deg)"});
-                isOpenNav = true;
-                $(".lp-vertical-nav").css("width", "150px");
-                $("#home-content").css({"width":"max-content","margin-left":"150px"});
+                navBar.isOpenNav = true;
+                navBar.width = "150px";
+                $(".lp-vertical-nav").css("width", navBar.width);
             }
+            setStyleElement();
         }
 
         $(".lp-vertical-nav .nav-box").hover(
@@ -874,8 +859,12 @@
         });
 
         function setStyleElement() {
-            if(window.innerWidth < 1280){
-                setMediumScreenStyle();
+            if($(window).innerWidth() - parseInt(navBar.width) < 1100){
+                if($(window).innerWidth() - parseInt(navBar.width) < 420) {
+                    setSmallScreenStyle();
+                }else{
+                    setMediumScreenStyle();
+                }
             }
             else{
                  setBigScreenStyle();
@@ -884,29 +873,45 @@
         }
 
         function setSmallScreenStyle(){
-
-        }
-
-        function setMediumScreenStyle() {
-            $("#home-content").css({"width":"max-content","margin-left":"150px"});
-            $("#left-column").css({"width": "682px", "padding": "0px"});
+            $("#home-content").css({"width": "calc(100% - " + navBar.width + ")","margin-left":navBar.width});
+            //$("#left-column").css({"width": "calc(100% - " + navBar.width + ")", "padding": "0px"});
+            $("#left-column").css({"width": "100%", "padding": "0px"});
+            $("#right-column > #right-col-row1").css("display", "inline-block");
+            $("#right-column").css({"width": "100%", "display": "initial"});
+            $("#right-column > div").css("width", "100%");
             //$("body").css("font-size", "14px !importan");
             //$("#right-singer-grid").css({"width": "540px", "height":"400px"});
             //$(".lp-vertical-nav").css("width", "5%");
+            
+        }
+
+        function setMediumScreenStyle() {
+            $("#home-content").css({"width": "calc(100% - " + navBar.width + ")","margin-left":navBar.width});
+            //$("#left-column").css({"width": "calc(100% - " + navBar.width + ")", "padding": "0px"});
+            $("#left-column").css({"width": "100%", "padding": "0px"});
+             $("#right-column > div").css("width", "418px");
+            $("#right-column > #right-col-row1").css("display", "none");
+            $("#right-column").css({"width": "100%", "display": "initial"});
+
+            //$("body").css("font-size", "14px !importan");
+            //$("#right-singer-grid").css({"width": "540px", "height":"400px"});
+            //$(".lp-vertical-nav").css("width", "5%");
+
         }
 
         function setBigScreenStyle(){
             
             $("#left-column").css({"width": "682px", "padding": "0px"});
+            $("#right-column").css({"width": "418px", "display": "inline-block"});
+            $("#right-column > div").css("width", "418px");
+            $("#right-column > #right-col-row1").css("display", "inline-block");
+             $("#home-content").css({"width":"max-content","margin-left":navBar.width});
             //$("body").css("font-size", "14px !importan");
             //$("#right-singer-grid").css({"width": "540px", "height":"400px"});
             //$(".lp-vertical-nav").css("width", "5%");
             setEqualRow();
-            if(isOpenNav){
-                $("#home-content").css({"width":"max-content","margin-left":"150px"});
-            }else {
-                $("#home-content").css({"width":"max-content","margin-left":"50px"});
-            }
+           
+           
         }
     </script>
 </body>

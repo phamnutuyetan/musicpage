@@ -11,50 +11,89 @@
 	<title></title>
 </head>
 
-<body>
+<body style="text-align: center;">
 	<div class="lp-vertical-nav">
         <!-- <div style="height: 120px">
         </div> -->
         <div id="btn-close-open" style="background-image: url(images/play-page/button_open.png); transition: 0.5s" >
         </div>
-        <div id="lp-vertical-nav-content" style="vertical-align: middle; width: 200px">
-            <div class="nav-box" style="margin-top: 50px">
-                <img src ="images/play-page/home-xxl1.png">
-                <p>Trang chủ</p>
-            </div>
-            <div class="nav-box" style="">
-                <img src="images/play-page/images1.png">
-                <p>Nghe</p>
-            </div>
-            <div class="nav-box">
-                <img src="images/play-page/profile1.png">
-                <p>Tôi</p>
-            </div>
-            <div class="nav-box">
-                <img src="images/play-page/contact1.png">
-                <p>Liên hệ</p>
-            </div>
-            <div class="nav-box">
-                <img src="images/play-page/topic1.png">
-                <p>Chủ đề</p>
-            </div>
-            <div class="nav-box">
-                <img src="images/play-page/album1.png">
-                <p>Album</p>
-            </div>
-            <div class="nav-box">
-                <img src="images/play-page/video1.png">
-                <p>Video</p>
-            </div>
-            <div class="nav-box">
-                <img src="images/play-page/artist1.png">
-                <p>Nghệ sĩ</p>
+        <div id="lp-vertical-nav-content" style="vertical-align: middle; width: 150px">
+            <div>
+                <div class="nav-box" style="">
+                    <img src ="images/play-page/home-xxl1.png">
+                    <p>Trang chủ</p>
+                </div>
+                <div class="nav-box" style="">
+                    <img src="images/play-page/images1.png">
+                    <p>Nghe</p>
+                </div>
+                <div class="nav-box">
+                    <img src="images/play-page/topic1.png">
+                    <p>Chủ đề</p>
+                </div>
+                <div class="nav-box">
+                    <img src="images/play-page/album1.png">
+                    <p>Album</p>
+                </div>
+                <div class="nav-box">
+                    <img src="images/play-page/video1.png">
+                    <p>Video</p>
+                </div>
+                <div class="nav-box">
+                    <img src="images/play-page/artist1.png">
+                    <p>Nghệ sĩ</p>
+                </div>
+                <div class="nav-box">
+                    <img src="images/play-page/contacts1.png">
+                    <p>Liên hệ</p>
+                </div>
             </div>
         </div>
         
     </div>
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+        <nav class="uk-navbar-container uk-navbar" uk-navbar="" style="position: relative;z-index: 980;height: 50px;">
+
+            <!-- Phần căn giữa -->
+            <div class="uk-navbar-center">
+                <!-- Logo-->
+                <img src="images/logo2.png" height="70px" width="14%" style="margin-right : 6% ">
+                <!-- Form tìm kiếm-->
+                <div class="uk-inline" style="width: 100%">
+                    <a class="uk-form-icon" href="#" uk-icon="icon: search"></a>
+                    <input class="uk-input" type="text" style="height: 30px">
+                </div>
+                <!-- <ul class="uk-navbar-nav">
+                    <li class="uk-active"><a href="#">MP3</a></li>
+                    <li class="uk-active"><a href="#">NEWS</a></li>
+                    <li class="uk-active"><a href="#">TV</a></li>
+                </ul> -->
+
+                <img src="images/avatar.png" height="20px" width="20px" style="margin-left: 20px">
+                <ul class="uk-navbar-nav">
+                    <li class="uk-active">
+                        <a href="#">Hồ sơ</a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <a href="#">
+                                    <li class="uk-nav-header text-link">Trang cá nhân</li>
+                                </a>
+                                <li><a href="#" class="text-link">Danh sách yêu thích</a></li>
+                                <li><a href="#" class="text-link">Theo dõi</a></li>
+                                <li><a href="#" class="text-link">Nhạc Upload</a></li>
+                                <li class="uk-active"><a href="#" class="text-link">Nâng cấp VIP</a></li>
+                                <li class="uk-nav-divider text-link"></li>
+                                <li><a href="#" class="text-link">Thoát</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div/>
+        </nav>
+    </div>
 	<div class="lp-content">
-		<div class="main-content">
+		<div id="left-column" class="main-content-left">
 			<div class="music-content sss" style=" background-color: #336666">
 				<div class="mc-top sssa ls-scroll-bar" style="height: 70%">
 					<div class="mc-left">
@@ -106,68 +145,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="other-song">
-				<h3 style="color: #fff; text-align: center;">NỘI DUNG LIÊN QUAN</h3>
-				<div class="list-other-song ls-scroll-bar" style="height: 300px; overflow-y: scroll;	overflow-x: hidden;">
-					<div class="ls-item">
-						<img src="images/play-page/grid-image-2.jpg">
-						<div class="ls-content">
-							<p class="ls-title">breaking bad</p>
-							<p class="ls-body">bich phuong</p>
-						</div>
-						<div class="ls-icon">
-							<img src="images/play-page/star-8-xxl.png">
-							<img src="images/play-page/downloading-updates-512.png">
-						</div>
-					</div>
-					<div class="ls-item">
-						<img src="images/play-page/grid-image-2.jpg">
-						<div class="ls-content">
-							<p class="ls-title">unni is alive</p>
-							<p class="ls-body">bich phuong</p>
-						</div>
-						<div class="ls-icon">
-							<img src="images/play-page/star-8-xxl.png">
-							<img src="images/play-page/downloading-updates-512.png">
-						</div>
-					</div>
-					<div class="ls-item">
-						<img src="images/play-page/grid-image-2.jpg">
-						<div class="ls-content">
-							<p class="ls-title">Có khi nào rời xa</p>
-							<p class="ls-body">bich phuong</p>
-						</div>
-						<div class="ls-icon">
-							<img src="images/play-page/star-8-xxl.png">
-							<img src="images/play-page/downloading-updates-512.png">
-						</div>
-					</div>
-					<div class="ls-item">
-						<img src="images/play-page/grid-image-2.jpg">
-						<div class="ls-content">
-							<p class="ls-title">Em đã sai vì em tin</p>
-							<p class="ls-body">bich phuong</p>
-						</div>
-						<div class="ls-icon">
-							<img src="images/play-page/star-8-xxl.png">
-							<img src="images/play-page/downloading-updates-512.png">
-						</div>
-					</div>
-					<div class="ls-item">
-						<img src="images/play-page/grid-image-2.jpg">
-						<div class="ls-content">
-							<p class="ls-title">la la land</p>
-							<p class="ls-body">bich phuong</p>
-						</div>
-						<div class="ls-icon">
-							<img src="images/play-page/star-8-xxl.png">
-							<img src="images/play-page/downloading-updates-512.png">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="ls-comment" style="">
-				<h2>BÌNH LUẬN (1000)</h2>
+			<div class="ls-comment" style="width: 682px; text-align: left;">
+				<h3 style="margin-bottom: 5px; margin-top: 10px">BÌNH LUẬN (1000)</h3>
 				<form class="frm-comment">
 			        <img class="fn-useravatar" src="images/play-page/grid-image-2.jpg">
 			        <div class="wrap-comment">
@@ -256,14 +235,335 @@
 					</div>
 					<span class="time-comment">18:00 09/10/2017</span>
 				</div>
-				<button class="common-btn" style="background-color: #006666; width: 100%; height: 50px; color: #fff">
+				<button class="common-btn btn-loadmore" style="">
 					Xem thêm
 				</button>
 			</div>
 		</div>
+			<div id="right-column" style="vertical-align: top; text-align: initial; padding: 10px;">
+	            <!-- Card chủ đề-->           
+
+	            <!--BXH bài hát-->
+	            <div id="right-col-row3" >
+	               <h4><span style="/*font-family:Helvetica*/ color: #ff3399; margin-left:10px">BÀI HÁT LIÊN QUAN</span></h4>
+	                <div class="uk-card-header" style="padding: 0; padding-left: 10px">
+	                    <div class="ls-item uk-grid-small uk-flex-middle" uk-grid>
+	                        <div class="uk-width-auto">
+	                            <h5>01</h5>
+	                        </div>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+	                        </div>
+	                        <div class="ls-icon">
+								<img src="images/play-page/star-icon1.png">
+								<img src="images/play-page/downloading1.png">
+							</div>
+	                    </div>
+	                    <div class="ls-item uk-grid-small uk-flex-middle" uk-grid>
+	                        <div class="uk-width-auto">
+	                            <h5>02</h5>
+	                        </div>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+	                        </div>
+	                        <div class="ls-icon">
+								<img src="images/play-page/star-icon1.png">
+								<img src="images/play-page/downloading1.png">
+							</div>
+	                    </div>
+	                    <div class="ls-item uk-grid-small uk-flex-middle" uk-grid>
+	                        <div class="uk-width-auto">
+	                            <h5>03</h5>
+	                        </div>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+	                        </div>
+	                        <div class="ls-icon">
+								<img src="images/play-page/star-icon1.png">
+								<img src="images/play-page/downloading1.png">
+							</div>
+	                    </div>
+	                    <div class="ls-item uk-grid-small uk-flex-middle" uk-grid>
+	                        <div class="uk-width-auto">
+	                            <h5>04</h5>
+	                        </div>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+	                        </div>
+	                        <div class="ls-icon">
+								<img src="images/play-page/star-icon1.png">
+								<img src="images/play-page/downloading1.png">
+							</div>
+	                    </div>
+	                    <div class="ls-item uk-grid-small uk-flex-middle" uk-grid>
+	                        <div class="uk-width-auto">
+	                            <h5>05</h5>
+	                        </div>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+	                        </div>
+	                        <div class="ls-icon">
+								<img src="images/play-page/star-icon1.png">
+								<img src="images/play-page/downloading1.png">
+							</div>
+	                    </div>
+	                    <div class="ls-item uk-grid-small uk-flex-middle" uk-grid>
+	                        <div class="uk-width-auto">
+	                            <h5>06</h5>
+	                        </div>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+	                        </div>
+	                        <div class="ls-icon">
+								<img src="images/play-page/star-icon1.png">
+								<img src="images/play-page/downloading1.png">
+							</div>
+	                    </div>
+	                    <!-- <div class="ls-item uk-grid-small uk-flex-middle" uk-grid>
+	                        <div class="uk-width-auto">
+	                            <h5>07</h5>
+	                        </div>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+	                        </div>
+	                        <div class="ls-icon">
+								<img src="images/play-page/star-icon1.png">
+								<img src="images/play-page/downloading1.png">
+							</div>
+	                    </div> -->
+	                </div> 
+	            </div>
+	            <!--BXH Video-->
+	            <div id="right-col-row5" style="margin-top: 20px">
+	               <h4><span style="/*font-family:Helvetica*/ color: #ff3399; margin-left:10px">VIDEO LIÊN QUAN</span></h4>
+	                <div class="uk-card-header" style="padding: 0; padding-left: 10px">
+	                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+	                        <img src="images/grid-video-2.jpg" style="width:125px;height:66px"/>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+	                        </div>
+	                    </div>
+	                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+	                        <img src="images/grid-video-3.jpg" style="width:125px;height:66px"/>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+	                        </div>
+	                    </div>
+	                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+	                        <img src="images/grid-video-4.jpg" style="width:125px;height:66px"/>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+	                        </div>
+	                    </div>
+	                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+	                        <img src="images/grid-video-1.jpg" style="width:125px;height:66px">
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+	                        </div>
+	                    </div>
+	                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+	                        <img src="images/grid-video-2.jpg" style="width:125px;height:66px"/>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+	                        </div>
+	                    </div>
+	                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+	                        <img src="images/grid-video-3.jpg" style="width:125px;height:66px"/>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+	                        </div>
+	                    </div>
+	                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+	                        <img src="images/grid-video-1.jpg" style="width:125px;height:66px">
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+	                        </div>
+	                    </div>
+	                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+	                        <img src="images/grid-video-2.jpg" style="width:125px;height:66px"/>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+	                        </div>
+	                    </div>
+	                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+	                        <img src="images/grid-video-3.jpg" style="width:125px;height:66px"/>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+	                        </div>
+	                    </div>
+	                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+	                        <img src="images/grid-video-2.jpg" style="width:125px;height:66px"/>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+	                        </div>
+	                    </div>
+	                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+	                        <img src="images/grid-video-3.jpg" style="width:125px;height:66px"/>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Túy Âm</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Xesi, Masew, Nhật Nguyễn</p>
+	                        </div>
+	                    </div>
+	                    <div class="uk-grid-small uk-flex-middle" uk-grid>
+	                        <img src="images/grid-video-2.jpg" style="width:125px;height:66px"/>
+	                        <div class="uk-width-expand">
+	                            <h4 class="uk-card-title uk-margin-remove-bottom" style="font-size:18px">Em Gái Mưa</h4>
+	                            <p class="uk-text-meta uk-margin-remove-top">Hương Tràm</p>
+	                        </div>
+	                    </div>
+	                </div> 
+	            </div>
+        	</div>
 	</div>
 
-	<div class="footer" style="height: 100px; position: absolute; bottom: 0; background-color: #003333;">
-	</div>
+	<div id="footer" style="position: absolute; width: 100%; border: none; height: fit-content; padding: 10px 0px; margin-top: 10px">
+        <div class="content-footer">
+            <div class="content-footer-left" itemscope="" itemtype="http://schema.org/Organization" style="display: inline-block; vertical-align: top">
+                <img itemprop="logo" src="images/logo2.png" height="56" width="56" alt="Zing MP3 - Đỉnh Cao Âm Nhạc">
+                <p>© 2015 4CONANG Corporation</p>
+                <p>Giấy phép MXH số 314/GP-BTTTT.</p>
+            </div>
+            <div class="content-footer-center"  style="display: inline-block;">
+                <div><a title="Giới thiệu" rel="nofollow" href="https://mp3.zing.vn/huong-dan/about">Giới thiệu</a></div>
+                <div><a title="Điều khoản" rel="nofollow" href="https://mp3.zing.vn/huong-dan/terms">Điều khoản</a></div>
+                <div><a title="Quảng cáo" rel="nofollow" href="http://ads.zing.vn/" target="_blank">Quảng cáo</a></div>
+                <div><a title="FAQs" rel="nofollow" href="http://v3.mp3.zing.vn/huong-dan/index.html">FAQs</a></div>
+                <div><a title="Copyright" rel="nofollow" href="https://mp3.zing.vn/huong-dan/copyright">Copyright</a></div>
+                <div><a title="Zing MP3 VIP" href="http://mp3.zing.vn/vip">Zing MP3 VIP</a></div>
+                <div><a title="Ứng dụng" href="https://mp3.zing.vn/apps">Ứng dụng</a></div>
+                <div><a title="Góp ý/Báo lỗi" rel="nofollow" href="https://docs.google.com/forms/d/1EHv8aYwV3rqUX3KE4H9IKpawf11cXFt8hr1iuW1pBWA/viewform?c=0&amp;w=1" target="_blank">Góp ý</a></div>
+                <div><a title="APIs" rel="nofollow" href="https://mp3.zing.vn/huong-dan/developer">APIs</a></div>
+                <div><a title="divên hệ" rel="nofollow" href="https://mp3.zing.vn/huong-dan/contact">liên hệ</a></div>
+            </div>
+            <div class="content-footer-right"  style="display: inline-block;">
+                
+            </div>
+        </div>
+    </div>
+
+	<script>
+		var navBar = {
+            isOpenNav: false,
+            width: "50px"
+        }
+		$("#btn-close-open").click(function(){
+            setWidthNav();
+        })
+        function setWidthNav(){
+            if(navBar.isOpenNav) {
+                $("#btn-close-open").css({"transform":"rotate(0deg)"});
+                navBar.isOpenNav = false;
+                navBar.width = "50px";
+
+                $(".lp-vertical-nav").css("width", navBar.width);
+            }else{
+                $("#btn-close-open").css({"transform":"rotate(180deg)"});
+                navBar.isOpenNav = true;
+                navBar.width = "150px";
+                $(".lp-vertical-nav").css("width", navBar.width);
+            }
+            setStyleElement();
+        }
+        $(".lp-vertical-nav .nav-box").hover(
+            function() {
+                let curImg = $(this).find('img')[0];
+                let src = curImg.src.replace("1", "2");
+                curImg.src = src;
+                $(this).css({
+                   " border-left": "2px solid #009DF7",
+                    "box-shadow":" 0 0 2px 0 rgba(76, 76, 76, 0.5)",
+                    "background-color": "rgba(221, 227, 230, 0.5)",
+                    "color": "#009DF7"
+                })
+            }, function() {
+                let curImg = $(this).find('img')[0];
+                let src = curImg.src.replace("2", "1");
+                curImg.src = src;
+                $(this).css({
+                   " border-left": "none",
+                    "box-shadow":" none",
+                    "background-color": "transparent",
+                    "color": "#383838"
+                })
+            }
+        );
+
+        $(window).resize(()=>{
+            setStyleElement();
+        });
+
+        function setStyleElement() {
+            if($(window).innerWidth() - parseInt(navBar.width) < 1100){
+                if($(window).innerWidth() - parseInt(navBar.width) < 420) {
+                    setSmallScreenStyle();
+                }else{
+                    setMediumScreenStyle();
+                }
+            }
+            else{
+                 setBigScreenStyle();
+            }
+            //setLeftNavPositon();
+        }
+
+        function setSmallScreenStyle(){
+            $(".lp-content").css({"width": "calc(100% - " + navBar.width + ")","margin-left":navBar.width});
+            //$("#left-column").css({"width": "calc(100% - " + navBar.width + ")", "padding": "0px"});
+            $("#left-column").css({"width": "100%", "padding": "0px"});
+            $("#right-column > #right-col-row1").css("display", "inline-block");
+            $("#right-column").css({"width": "100%", "display": "initial"});
+            $("#right-column > div").css("width", "100%");
+            //$("body").css("font-size", "14px !importan");
+            //$("#right-singer-grid").css({"width": "540px", "height":"400px"});
+            //$(".lp-vertical-nav").css("width", "5%");
+            
+        }
+
+        function setMediumScreenStyle() {
+            $(".lp-content").css({"width": "calc(100% - " + navBar.width + ")","margin-left":navBar.width});
+            //$("#left-column").css({"width": "calc(100% - " + navBar.width + ")", "padding": "0px"});
+            $("#left-column").css({"width": "100%", "padding": "0px"});
+             $("#right-column > div").css("width", "418px");
+            $("#right-column > #right-col-row1").css("display", "none");
+            $("#right-column").css({"width": "100%", "display": "initial"});
+
+            //$("body").css("font-size", "14px !importan");
+            //$("#right-singer-grid").css({"width": "540px", "height":"400px"});
+            //$(".lp-vertical-nav").css("width", "5%");
+
+        }
+
+        function setBigScreenStyle(){
+            
+            $("#left-column").css({"width": "682px", "padding": "0px"});
+            $("#right-column").css({"width": "418px", "display": "inline-block"});
+            $("#right-column > div").css("width", "418px");
+            $("#right-column > #right-col-row1").css("display", "inline-block");
+             $(".lp-content").css({"width":"max-content","margin-left":navBar.width, "display": "inline-block"});
+            //$("body").css("font-size", "14px !importan");
+            //$("#right-singer-grid").css({"width": "540px", "height":"400px"});
+            //$(".lp-vertical-nav").css("width", "5%");
+            setEqualRow();
+           
+           
+        }
+	</script>
 </body>
 </html>
