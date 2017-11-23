@@ -1,5 +1,5 @@
 /*
-	active: #009DF7;
+	active: #ff3399;
 	normal: #383838;
 */
 .common-btn {
@@ -11,9 +11,9 @@
     color: #fff;
 }
 
-.common-btn:hover {
+.common-btn:ver {
 	color: #fff;
-	background-color: #009DF7;
+	background-color: #ff3399;
 }
 
 .image-btn {
@@ -28,7 +28,7 @@
 }
 
 .image-btn:hover p{
-	color: #009DF7;
+	color: #ff3399;
 }
 
 .image-btn > img {
@@ -84,7 +84,7 @@ box-shadow: 2px 0 5px 0 rgba(76, 76, 76, 0.5);
 	/*text-align: center;*/
 }
 /*.lp-vertical-nav .nav-box:hover {
-	border-left: 2px solid #009DF7;
+	border-left: 2px solid #ff3399;
     box-shadow: 0 0 2px 0 rgba(76, 76, 76, 0.5);
     background-color: rgba(221, 227, 230, 0.5);
 }*/
@@ -247,7 +247,7 @@ box-shadow: 2px 0 5px 0 rgba(76, 76, 76, 0.5);
 .mc-bottom progress[name="mp3-status"]::-webkit-progress-value {
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
-	background: #009DF7;
+	background: #ff3399;
 }
 
 .mc-bottom progress[name="mp3-status"]::-moz-progress-bar {
@@ -427,7 +427,7 @@ box-shadow: 2px 0 5px 0 rgba(76, 76, 76, 0.5);
 	margin: 0px;
 }
 
-.lp-content h4 {
+h4 {
 	margin-bottom: 0px;
 }
 
@@ -468,7 +468,7 @@ box-shadow: 2px 0 5px 0 rgba(76, 76, 76, 0.5);
 }
 
 #right-column div :hover {
-	color: #009DF7;
+	color: #ff3399;
 	cursor: pointer;
 }
 
