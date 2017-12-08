@@ -11,7 +11,7 @@
     color: #fff;
 }
 
-.common-btn:ver {
+.common-btn:hover {
 	color: #fff;
 	background-color: #ff3399;
 }
@@ -136,6 +136,7 @@ box-shadow: 2px 0 5px 0 rgba(76, 76, 76, 0.5);
 .lp-content {
 	background-color: #fff;
 	/*height: 1000px;*/
+	transition: 0.5s;
 }
 
 .main-content-left {
